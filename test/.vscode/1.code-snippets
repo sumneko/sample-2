@@ -1,0 +1,9 @@
+{
+	"Tostring": {
+		"prefix": "ts",
+		"body": [
+			"tostring($0)",
+		],
+		"description": "Tostrings"
+	}
+}
