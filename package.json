@@ -21,6 +21,16 @@
 	],
 	"main": "./client/out/extension",
 	"contributes": {
+		"commands": [
+			{
+				"title": "test1",
+				"command": "extension.helloWorld"
+			},
+			{
+				"title": "test2",
+				"command": "helloWorld"
+			}
+		],
 		"configuration": {
 			"type": "object",
 			"title": "Example configuration",
