@@ -1,9 +1,10 @@
-import { languages } from 'vscode';
+import * as vscode from 'vscode';
 
-export function activate() {
-languages.registerCompletionItemProvider([{ language: 'typescript'}], {
-		provideCompletionItems: () => {
-			return null;
-		}
-	}, '\n')
-}
+vscode.languages.registerHoverProvider('lua', {
+	provideHover() {
+		return new vscode.Hover(markupContent)
+	}
+})
+
+const markupContent = new vscode.MarkdownString('[Hello World](command:extension.helloWorld)')
+markupContent.isTrusted = true;
